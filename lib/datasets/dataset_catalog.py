@@ -34,6 +34,8 @@ IM_DIR = 'im_dir'
 ANN_FN = 'ann_fn'
 IM_LIST='im_list'
 IM_PREFIX = 'image_prefix'
+RAW_DIR = 'raw_dir'
+DEVKIT_DIR = 'devkit_dir'
 
 # Available datasets
 DATASETS = {

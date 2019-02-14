@@ -46,6 +46,11 @@ import utils.blob as blob_utils
 import utils.boxes as box_utils
 import utils.image as image_utils
 import utils.keypoints as keypoint_utils
+
+import sys
+from os import path
+d = path.dirname(__file__)
+sys.path.append(d + '/../../')
 import lanms
 
 from PIL import Image, ImageDraw, ImageFont

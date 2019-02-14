@@ -49,7 +49,7 @@ TRAIN:
   SNAPSHOT_ITERS: 10000
 
   ##################### pre-train on synth ##########################
-  WEIGHTS: https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/MSRA/R-50.pkl
+  # WEIGHTS: https://s3-us-west-2.amazonaws.com/detectron/ImageNetPretrained/MSRA/R-50.pkl
   DATASETS: ('synth_train', )
   SCALES: (800,)
   MAX_SIZE: 1333
@@ -89,7 +89,8 @@ IMAGE:
   rotate_delta: 15
 TEST:
   OUTPUT_POLYGON: False # only set to True for totaltext
-  WEIGHTS: ./train/shrink++_finetune/model_iter79999.pkl
+  # WEIGHTS: ./train/shrink++_finetune/model_iter79999.pkl
+  WEIGHTS: ./model_iter79999.pkl
   DATASETS: ('icdar2013_test',)
   SCALES: (1000,)
   MAX_SIZE: 3333
