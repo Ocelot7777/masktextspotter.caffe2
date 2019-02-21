@@ -49,7 +49,7 @@ TRAIN:
   SNAPSHOT_ITERS: 10000
 
   ##################### pre-train on synth ##########################
-  WEIGHTS: https://dl.fbaipublicfiles.com/detectron/ImageNetPretrained/MSRA/R-50.pkl
+  # WEIGHTS: https://dl.fbaipublicfiles.com/detectron/ImageNetPretrained/MSRA/R-50.pkl
   DATASETS: ('synth_train', )
   SCALES: (800,)
   MAX_SIZE: 1333
@@ -89,15 +89,17 @@ IMAGE:
   rotate_prob: 0.5
   rotate_delta: 15
 TEST:
-  OUTPUT_POLYGON: False # only set to True for totaltext
-  WEIGHTS: ./train/shrink++_finetune/model_iter79999.pkl
-  DATASETS: ('icdar2015_test',)
+  # OUTPUT_POLYGON: False # only set to True for totaltext
+  OUTPUT_POLYGON: True # only set to True for totaltext
+  WEIGHTS: ./models/model_iter79999.pkl
+  DATASETS: ('icdar2013_test',)
   SCALES: (1000,)
   MAX_SIZE: 3333
   NMS: 0.5
   RPN_PRE_NMS_TOP_N: 1000  # Per FPN level
   RPN_POST_NMS_TOP_N: 1000
-  VIS: False
+  # VIS: False
+  VIS: True
   SCORE_THRESH: 0.2
   BBOX_AUG:
     ENABLED: False
